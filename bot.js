@@ -2,17 +2,12 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const prefix = "-CAR-";
-bot.on("ready", async() => {
-  console.log(`Bot is ready! ${bot.user.username}`);
-  try {
-    let link = await bot.generateInvite(["ADMINISTRATOR"])
-    console.log(link);
-  } catch(e) {
-    console.log(e.stack);
-  }
+bot.on("ready", () => {
+  let link = await bot.generateInvite(["ADMINISTRATOR"]);
+  console.log(link);
 });
 
-bot.on("message", async message => {
+bot.on("message", message => {
   if (message.author.bot) return;
   if (message.channel.type === "dm") return message.channel.sendMessage("Sorry, but I don't have the capability to respond to DMs at the moment.");
 
