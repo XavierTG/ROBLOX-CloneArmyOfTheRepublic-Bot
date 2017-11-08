@@ -16,6 +16,7 @@ client.on('message', msg => {
   console.log(`${msg.author.username} sent "${msg.content}" in #${msg.channel.name}`);
   let channel = msg.channel.guild.channels.find(`name`, `messagelogs`);
   channel.sendMessage(`${msg.author.username} sent "${msg.content}" in ${msg.channel}`);
+  channel.sendMessage(`___________`);
   if (msg.content === '-CAR-test') {
     msg.reply('this is a test response to a test prompt message.');
     return;
@@ -28,7 +29,8 @@ client.on('message', msg => {
     msg.reply('here is a list of available commands: -CAR-test, -CAR-botinfo, -CAR-announce');
   }
   if (msg.content === '-CAR-announce') {
-    return msg.reply('this command is imcomplete but coming soon!');
+    msg.reply('this command is incomplete, but coming soon!');
+    return;
     msg.reply('do you want the announcement to be discord only, in-game only, or both?');
 });
 
