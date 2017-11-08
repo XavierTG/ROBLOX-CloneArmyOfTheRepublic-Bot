@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  console.log(msg.content)
+  console.log(msg.author, msg.content)
   if (msg.content === '-CAR-test') {
     msg.reply('This is a test response to a test prompt message.');
     return;
