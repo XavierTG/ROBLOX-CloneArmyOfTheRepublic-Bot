@@ -24,6 +24,9 @@ client.on('message', msg => {
     msg.reply('this discord bot is scripted and managed by XavierTG for usage by the ROBLOX group: -Clone Army Of The Republic-. This bot is in pre-alpha testing and is lacking many features at the moment. For more information, visit the partially complete bot concept document (will be updated every other day or daily) at https://github.com/XavierTG/ROBLOX-CloneArmyOfTheRepublic-Bot/blob/master/BotConcept.md');
     return;
   }
+  if (msg.content === '-CAR-help') {
+    msg.reply('here is a list of available commands: -CAR-test, -CAR-botinfo');
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
