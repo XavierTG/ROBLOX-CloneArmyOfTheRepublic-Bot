@@ -1,6 +1,5 @@
 
 const Discord = require("discord.js");
-const botSettings = require("./botsettings.json");
 const bot = new Discord.Client();
 const prefix = "-CAR-";
 bot.on("ready", async() => {
