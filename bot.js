@@ -7,7 +7,9 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  console.log(msg.author, msg.content)
+  console.log(msg.author)
+  console.log(msg.content)
+  if (msg.channel.type === "dm") return msg.channel.sendMessage("Sorry, but I am currently not capable of responding to DMs.");
   if (msg.content === '-CAR-test') {
     msg.reply('This is a test response to a test prompt message.');
     return;
