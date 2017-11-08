@@ -7,7 +7,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  console.log(`${msg.author.username} sent ${msg.content} in ${msg.channel.name}`);
+  console.log(`${msg.author.username} sent "${msg.content}" in ${msg.channel.name}`);
   let channel = msg.channel.guild.channels.find(`logs`);
   channel.sendMessage(`${msg.author.username} sent ${msg.content} in ${msg.channel.name}`);
   if (msg.author.bot) return;
