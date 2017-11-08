@@ -4,8 +4,9 @@
   "description": "Bot for the ROBLOX group -Clone Army of the Republic-, made by XavierTG",
   "main": "bot.js",
   "dependencies": {
-    "discord.js": "^11.2.1"
+    "discord.js": "^11.2.1",
   },
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
   },
+}
