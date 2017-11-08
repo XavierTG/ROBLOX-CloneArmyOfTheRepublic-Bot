@@ -2,13 +2,13 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-client.on('ready', async () => {
+client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
   const link = await client.generateInvite(["ADMINISTRATOR"]);
   console.log(link)
 });
 
-client.on('message', async msg => {
+client.on('message', msg => {
   console.log(msg.author.username)
   console.log(msg.content)
   if (msg.author.bot) return;
