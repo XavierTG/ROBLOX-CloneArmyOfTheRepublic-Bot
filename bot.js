@@ -25,8 +25,11 @@ client.on('message', msg => {
     return;
   }
   if (msg.content === '-CAR-help') {
-    msg.reply('here is a list of available commands: -CAR-test, -CAR-botinfo');
+    msg.reply('here is a list of available commands: -CAR-test, -CAR-botinfo, -CAR-announce');
   }
+  if (msg.content === '-CAR-announce') {
+    return msg.reply('this command is imcomplete but coming soon!');
+    msg.reply('do you want the announcement to be discord only, in-game only, or both?');
 });
 
 client.login(process.env.BOT_TOKEN);
