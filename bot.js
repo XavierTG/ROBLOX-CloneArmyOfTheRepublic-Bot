@@ -32,6 +32,7 @@ client.on('message', msg => {
     msg.reply('this command is incomplete, but coming soon!');
     return;
     msg.reply('do you want the announcement to be discord only, in-game only, or both?');
+  }
 });
 
 client.login(process.env.BOT_TOKEN);
