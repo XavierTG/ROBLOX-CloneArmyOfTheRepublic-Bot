@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  const link = await client.generateInvite(["ADMINISTRATOR"]);
+  const link = client.generateInvite(["ADMINISTRATOR"]);
   console.log(link)
 });
 
