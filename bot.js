@@ -16,7 +16,6 @@ client.on('message', msg => {
   console.log(`${msg.author.username} sent "${msg.content}" in #${msg.channel.name}`);
   let channel = msg.channel.guild.channels.find(`name`, `messagelogs`);
   channel.sendMessage(`${msg.author.username} sent "${msg.content}" in ${msg.channel}`);
-  channel.sendMessage("_______________");
   if (msg.content === '-CAR-test') {
     msg.reply('this is a test response to a test prompt message.');
     return;
