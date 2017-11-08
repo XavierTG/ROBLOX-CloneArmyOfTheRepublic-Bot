@@ -4,8 +4,10 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.generateInvite(['ADMINISTRATOR']).then(link => {
-    console.log('Generated bot invite link: ${link}');
+  client.generateInvite(['ADMINISTRATOR'])
+  .then(link => {
+    console.log(`Generated bot invite link: ${link}`);
+  });
 });
 
 client.on('message', msg => {
