@@ -2,7 +2,7 @@
 const Discord = require("discord.js");
 const botSettings = require("./botsettings.json");
 const bot = new Discord.Client();
-const prefix = "-CAR-"
+const prefix = "-CAR-";
 bot.on("ready", async() => {
   console.log(`Bot is ready! ${bot.user.username}`);
   try {
