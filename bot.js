@@ -3,16 +3,15 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 client.on('ready', () => {
+  console.log(link);
+  let link = client.generateInvite(["ADMINISTRATOR"]);
   console.log(`Logged in as ${client.user.tag}!`);
-  const link = client.generateInvite(["ADMINISTRATOR"]);
-  console.log(link)
 });
 
 client.on('message', msg => {
   console.log(msg.author.username);
   console.log(msg.content);
-  console.log("CHANNEL ID: ${msg.channel.id}");
-  msg.channel.guild.channels.333653329664147457.sendMessage("Message sent by ${msg.author.username} in ${msg.channel.name}.");
+  console.log("CHANNEL name: ${msg.channel.name}");
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return msg.channel.sendMessage("Sorry, but I am currently not capable of responding to DMs.");
   if (msg.content === '-CAR-test') {
