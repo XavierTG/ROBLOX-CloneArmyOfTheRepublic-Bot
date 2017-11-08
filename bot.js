@@ -1,7 +1,8 @@
 
 const Discord = require("discord.js");
-
+const botSettings = require("./botsettings.json");
 const bot = new Discord.Client();
+const prefix = botSettings.prefix;
 bot.on("ready", async() => {
   console.log(`Bot is ready! ${bot.user.username}`);
   try {
@@ -24,15 +25,15 @@ bot.on("message", async message => {
   console.log(command);
   console.log(args);
 
-  if(!command.startsWith("-CAR-")) return;
-  if(command === `${"-CAR-"}test`) {
+  if(!command.startsWith(prefix)) return;
+  if(command === `${prefix}test`) {
     message.channel.sendMessage("This is a test response to a test message.");
     return;
   }
-  if(command === `${"-CAR-"}botinfo`) {
+  if(command === `${prefix}botinfo`) {
     message.channel.sendMessage("This is a work in progress bot for the ROBLOX group -Clone Army of the Republic-. More information available at https://github.com/XavierTG/ROBLOX-CloneArmyOfTheRepublic-Bot/commit/a428a61da57738c0ec067c3199f21538bc2ec4f8?short_path=6e68727#diff-6e68727603fd21cce510f36e6cf17477.");
   }
 
 });
 
-bot.login(process.env.BOT_TOKEN);
+bot.login(botSettings.token);
