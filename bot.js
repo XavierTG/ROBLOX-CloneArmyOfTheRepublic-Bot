@@ -10,7 +10,7 @@ client.on('ready', () => {
   });
 });
 
-client.on('message', async msg => {
+client.on('message', async() msg => {
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return msg.channel.sendMessage("Sorry, but I am currently not capable of responding to DMs.");
   console.log(`${msg.author.username} sent "${msg.content}" in #${msg.channel.name}`);
