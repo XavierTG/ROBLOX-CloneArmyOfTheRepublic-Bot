@@ -1,12 +1,13 @@
+
 {
-  "name": "xaviertgbot",
-  "version": "0.1.0",
-  "description": "Bot for the ROBLOX group -Clone Army of the Republic-, made by XavierTG",
-  "main": "bot.js",
+"name": "-CAR-discordbot",
+"description": "Discord bot for ROBLOX group -Clone Army Of The Republic-, by XavierTG",
+"version": "0.1.0",
+"main": "bot.js",
+"scripts": {
+  "start": "node bot.js"
+  },
   "dependencies": {
-    "discord.js": "^11.2.1",
-  },
-  "scripts": {
-    "start": "node bot.js",
-  },
-}
+  "discord.js": "11.1.0"
+  }
+ }
