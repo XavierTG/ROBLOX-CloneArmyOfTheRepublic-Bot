@@ -9,8 +9,10 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-  console.log(msg.author.username)
-  console.log(msg.content)
+  console.log(msg.author.username);
+  console.log(msg.content);
+  console.log("CHANNEL ID: ${msg.channel.id}");
+  msg.channel.guild.channels.333653329664147457.sendMessage("Message sent by ${msg.author.username} in ${msg.channel.name}.");
   if (msg.author.bot) return;
   if (msg.channel.type === "dm") return msg.channel.sendMessage("Sorry, but I am currently not capable of responding to DMs.");
   if (msg.content === '-CAR-test') {
